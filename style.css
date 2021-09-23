@@ -14,11 +14,11 @@ h1{
     color: darkgray;
 }
 .outer{
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     background-color: rgb(80, 76, 76);
-    height: 85vh;
-    position: relative;
+    /* height: 85vh; */
+    /* position: relative; */
 }
 .container{
     width: 100%;
@@ -26,11 +26,19 @@ h1{
     color: rgb(190, 174, 174);
     background-color: rgb(80, 76, 76);
     justify-content: space-around;
-    padding: 20px 0px;
+    margin: 20px 0px;
     border-bottom: 1px solid rgb(190, 174, 174);
     flex-wrap: wrap;
+    height: 50vh;
+    
 }
 .about{
+    /* height: 300px; */
+    height: 50vh;
+
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* height: 450px; */
     width: 40%;
 }
 .categories, .quick-links, .contact-us{
@@ -59,6 +67,7 @@ aside ul li{
     list-style: none;
 }
 .section-1{
+    height: 10vh;
     display: flex;
     justify-content: center;
     padding: 20px 0px;
@@ -75,9 +84,12 @@ aside ul li{
     border-radius: 20px;
 }
 .section-2{
+    height: 15vh;
     display: flex;
     justify-content: center;
-    padding: 50px;
+    /* padding: 50px; */
+    align-items: center;
+
 }
 .section-2 i{
     color: white;
@@ -88,9 +100,10 @@ aside ul li{
     color: rgb(190, 174, 174);
 }
 footer{
+    height: 5vh;
     width: 100%;
     padding: 10px;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     background-color: rgb(65, 62, 62);
   
@@ -98,4 +111,16 @@ footer{
 footer p{
     color: rgb(190, 174, 174);
     text-align: center;
+}
+@media only screen and (max-width:700px)
+{
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: 100%;
+        /* border:2px solid black; */
+        grid-gap: 10px;
+        
+    }
+    
 }
